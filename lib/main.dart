@@ -24,7 +24,35 @@ class Home extends StatelessWidget {
                 ),
               ),
 
-              Image.network('https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?cs=srgb&dl=pexels-chan-walrus-958545.jpg&fm=jpg'),
+              Container(
+                width: 300,
+                height: 400,
+                child: Card(
+                  elevation: 10,
+                  child: Column(
+                    children: [
+                      Container(
+                        padding: EdgeInsets.all(15),
+                          child: Image.asset('assets/images/perfume.png'),
+                      ),
+                      Text(
+                          'Perfume',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 23,
+                        ),
+                      ),
+                      ElevatedButton(
+                          onPressed: (){},
+                          child: Text(
+                            'Add to cart'
+                          )
+                      ),
+                    ],
+                  ),
+
+                ),
+              ),
 
 
               ElevatedButton(
