@@ -16,7 +16,7 @@ class Home extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                  'Hello App',
+                  'Corvit Mobile App',
                 style: TextStyle(
                   fontSize: 40,
                   fontWeight: FontWeight.w400,
@@ -28,19 +28,38 @@ class Home extends StatelessWidget {
                 width: 300,
                 height: 400,
                 child: Card(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(350),
+                      topRight: Radius.circular(15),
+                    ),
+                  ),
                   elevation: 10,
                   child: Column(
+
                     children: [
                       Container(
                         padding: EdgeInsets.all(15),
                           child: Image.asset('assets/images/perfume.png'),
                       ),
-                      Text(
-                          'Perfume',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          fontSize: 23,
-                        ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text(
+                              'Perfume',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 23,
+                            ),
+                          ),
+                          Text(
+                            '\$ 560',
+                            style: TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 18,
+                            ),
+                          ),
+                        ],
                       ),
                       ElevatedButton(
                           onPressed: (){},
@@ -55,17 +74,6 @@ class Home extends StatelessWidget {
               ),
 
 
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.greenAccent,
-                  elevation: 10,
-                  shadowColor: Colors.yellow
-                ),
-                onPressed:(){} ,
-                child: Text('Hello CIT'),
-              ),
-
-              Text('Hello App'),
 
             ],
           ),
