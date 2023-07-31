@@ -1,9 +1,10 @@
 import 'package:corvit/Stack_test.dart';
+import 'package:corvit/product_detail.dart';
 import 'package:flutter/material.dart';
 
 
 void main() {
-  runApp(const Home());
+  runApp(const ProductDetail());
 }
 
 class Home extends StatelessWidget {
