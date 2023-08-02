@@ -54,7 +54,13 @@ class _ProductDetailState extends State<ProductDetail> {
                         child: Row(
                           children: [
                             InkWell(
-                              onTap: (){},
+                              onTap: (){
+
+                                value--;
+                                setState(() {
+
+                                });
+                              },
                               child: Card(
                                 color: Color(0xffe2dcd7),
                                 elevation: 6.0,
@@ -88,7 +94,12 @@ class _ProductDetailState extends State<ProductDetail> {
                               width: 10,
                             ),
                             InkWell(
-                              onTap: (){},
+                              onTap: (){
+                                value++;
+                                setState(() {
+
+                                });
+                              },
                               child: Card(
                                 color: Color(0xffcd461d),
                                 elevation: 6.0,
