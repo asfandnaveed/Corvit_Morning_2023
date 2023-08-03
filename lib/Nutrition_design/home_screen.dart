@@ -37,6 +37,29 @@ class _NutritionHomeState extends State<NutritionHome> {
                   fontWeight: FontWeight.w500
                 ),
               ),
+
+              SizedBox(
+                height: 30,
+              ),
+
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 15),
+                decoration: BoxDecoration(
+                  color: Color(0xffEFEEEE),
+                  borderRadius: BorderRadius.circular(60)
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    icon: Icon(
+                      Icons.search,
+
+                    ),
+                    hintText: 'Search',
+                    border: InputBorder.none
+                  ),
+                ),
+              ),
+
             ],
           ),
         ),
