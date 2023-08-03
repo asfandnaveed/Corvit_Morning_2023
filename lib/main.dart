@@ -1,3 +1,4 @@
+import 'package:corvit/Nutrition_design/home_screen.dart';
 import 'package:corvit/Stack_test.dart';
 import 'package:corvit/product_detail.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class SplashScreen extends StatelessWidget {
       home: Scaffold(
         body: AnimatedSplashScreen(
           splash: 'assets/images/perfume.png',
-          nextScreen: ProductDetail(),
+          nextScreen: NutritionHome(),
           splashTransition: SplashTransition.slideTransition,
           duration: 5000,
 
