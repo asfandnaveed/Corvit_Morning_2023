@@ -9,6 +9,42 @@ class NutritionHome extends StatefulWidget {
 }
 
 class _NutritionHomeState extends State<NutritionHome> {
+
+  List<String> categories= [
+    'Foods',
+    'Drinks',
+    'Snacks',
+    'Sauce',
+    'Salad',
+    'Starters',
+    'Appetizer',
+    'Dessert',
+  ];
+
+  List<String> pImages= [
+    'assets/images/cardImg1.png',
+    'assets/images/cardImg2.png',
+    'assets/images/cardImg1.png',
+    'assets/images/cardImg2.png',
+
+  ];
+
+  List<String> pName= [
+    'Veggie tomato mix',
+    'Allu Gobbi',
+    'Lasagna',
+    'Daam Pukht',
+
+  ];
+
+  List<String> pPrice= [
+    '40',
+    '20',
+    '100',
+    '500',
+
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +95,65 @@ class _NutritionHomeState extends State<NutritionHome> {
                   ),
                 ),
               ),
+
+              SizedBox(
+                height: 30,
+              ),
+
+              Container(
+                height: 70,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: categories.length,
+                    itemBuilder: (context,index){
+                      return Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          categories[index],
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                      );
+                    }
+                ),
+              ),
+
+
+              SizedBox(
+                height: 30,
+              ),
+
+              Container(
+                height: 350,
+                child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: pImages.length,
+                    itemBuilder: (context,index){
+                      return Stack(
+                        children: [
+                          Container(
+                              width: 200,
+                              height: 250,
+                              margin: EdgeInsets.only(top: 40),
+                              child: Card(
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(25),
+                                ),
+                              ),
+                          ),
+                          Positioned(
+                              child: Image.asset(pImages[index],
+                              ),
+                          ),
+                        ],
+                      );
+                    }
+                ),
+              ),
+
+
 
             ],
           ),
