@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "8897150125",
+    "project_id": "corvit-fa83d",
+    "storage_bucket": "corvit-fa83d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8897150125:android:12f708826a8e09144d1a24",
+        "android_client_info": {
+          "package_name": "com.proglabs.foodapp.corvit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8897150125-90khvvripa20gogdseaou9q0l425i4ul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2EB-t6KA8EKlNZh0ChWkTp__q3PXiuJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8897150125-90khvvripa20gogdseaou9q0l425i4ul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,12 +1,17 @@
+import 'package:corvit/Constant/constant.dart';
+import 'package:corvit/LoginScreen/login.dart';
 import 'package:corvit/Nutrition_design/home_screen.dart';
 import 'package:corvit/Stack_test.dart';
 import 'package:corvit/product_detail.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   runApp(const SplashScreen());
 }
 
@@ -17,10 +22,32 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: kPrimaryColor,
+        scaffoldBackgroundColor: kBackGroundColor,
+        textTheme: const TextTheme(
+          headline4: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
+          headline6:
+          TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
+          button: TextStyle(
+            color: kPrimaryColor,
+          ),
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.white.withOpacity(0.2)),
+          ),
+        ),
+      ),
       home: Scaffold(
         body: AnimatedSplashScreen(
           splash: 'assets/images/perfume.png',
-          nextScreen: NutritionHome(),
+          nextScreen: SignInScreen(),
           splashTransition: SplashTransition.slideTransition,
           duration: 5000,
 
