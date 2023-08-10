@@ -1,4 +1,5 @@
 import 'package:corvit/Constant/constant.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -10,6 +11,12 @@ class SignInScreen extends StatefulWidget {
 
 class _SignInScreenState extends State<SignInScreen> {
   bool eye = true;
+
+
+  TextEditingController email = TextEditingController();
+  TextEditingController password = TextEditingController();
+
+  FirebaseAuth auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         padding: const EdgeInsets.only(bottom: 30),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
+                          children:  [
                             Padding(
                               padding: EdgeInsets.only(right: 8.0),
                               child: Icon(
@@ -65,6 +72,7 @@ class _SignInScreenState extends State<SignInScreen> {
                             ),
                             Expanded(
                               child: TextField(
+                                controller:email,
                                 decoration:
                                 InputDecoration(hintText: "Email Address"),
                               ),
@@ -84,6 +92,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           ),
                           Expanded(
                             child: TextField(
+                              controller: password,
                               obscureText: eye,
                               decoration: InputDecoration(hintText: "Password"),
                             ),
@@ -142,6 +151,10 @@ class _SignInScreenState extends State<SignInScreen> {
                             const Spacer(),
                             InkWell(
                               onTap: (){
+
+                                debugPrint(email.text);
+
+                                auth.createUserWithEmailAndPassword(email: email.text, password: password.text);
 
                               },
                               child: Container(
