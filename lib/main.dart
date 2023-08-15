@@ -2,6 +2,7 @@ import 'package:corvit/Constant/constant.dart';
 import 'package:corvit/LoginScreen/login.dart';
 import 'package:corvit/Nutrition_design/home_screen.dart';
 import 'package:corvit/Stack_test.dart';
+import 'package:corvit/firebase_options.dart';
 import 'package:corvit/product_detail.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -11,7 +12,9 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const SplashScreen());
 }
 

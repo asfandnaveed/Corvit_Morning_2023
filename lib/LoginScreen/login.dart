@@ -154,7 +154,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                                 debugPrint(email.text);
 
-                                auth.createUserWithEmailAndPassword(email: email.text, password: password.text);
+                                auth.signInWithEmailAndPassword(email: email.text, password: password.text);
 
                               },
                               child: Container(
