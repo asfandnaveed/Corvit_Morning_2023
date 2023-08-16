@@ -1,4 +1,5 @@
 import 'package:corvit/Constant/constant.dart';
+import 'package:corvit/HomePage/DBHomepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -156,6 +157,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                                 auth.signInWithEmailAndPassword(email: email.text, password: password.text);
 
+                                Navigator.push(context, MaterialPageRoute(builder: (context)=>DBHomePage() ));
                               },
                               child: Container(
                                 padding: const EdgeInsets.all(16),

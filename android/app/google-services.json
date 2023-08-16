@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "8897150125",
+    "firebase_url": "https://corvit-fa83d-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "corvit-fa83d",
     "storage_bucket": "corvit-fa83d.appspot.com"
   },
@@ -29,6 +30,13 @@
             {
               "client_id": "8897150125-90khvvripa20gogdseaou9q0l425i4ul.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "8897150125-4gev625bd7fncvpda2vqul210if0bl5o.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.proglabs.foodapp.corvit"
+              }
             }
           ]
         }

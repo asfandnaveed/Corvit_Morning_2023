@@ -54,6 +54,7 @@ class DefaultFirebaseOptions {
     appId: '1:8897150125:android:12f708826a8e09144d1a24',
     messagingSenderId: '8897150125',
     projectId: 'corvit-fa83d',
+    databaseURL: 'https://corvit-fa83d-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'corvit-fa83d.appspot.com',
   );
 
@@ -62,6 +63,7 @@ class DefaultFirebaseOptions {
     appId: '1:8897150125:ios:5e6d2fa0ca0c33204d1a24',
     messagingSenderId: '8897150125',
     projectId: 'corvit-fa83d',
+    databaseURL: 'https://corvit-fa83d-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'corvit-fa83d.appspot.com',
     iosClientId: '8897150125-4gev625bd7fncvpda2vqul210if0bl5o.apps.googleusercontent.com',
     iosBundleId: 'com.proglabs.foodapp.corvit',
