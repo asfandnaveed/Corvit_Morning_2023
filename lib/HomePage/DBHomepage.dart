@@ -25,7 +25,12 @@ class _DBHomePageState extends State<DBHomePage> {
                   await database.child('User').child('Ali').set({
                     "Password":"123456",
                     "Email":"ali@gmail.com",
-                    "height":"5.6"
+                    "height":"5.6",
+                    "ingredients":{
+                      "value1":"Ing",
+                      "value2":"Ing",
+                      "value3":"Ing",
+                    }
                   });
                 },
                 child: Text('Insert DATA'),
