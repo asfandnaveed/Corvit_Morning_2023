@@ -3,6 +3,7 @@ import 'package:corvit/HomePage/DBHomepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
 
 class SignInScreen extends StatefulWidget {
 
@@ -155,9 +156,13 @@ class _SignInScreenState extends State<SignInScreen> {
 
                                 debugPrint(email.text);
 
-                                auth.signInWithEmailAndPassword(email: email.text, password: password.text);
+                                // auth.signInWithEmailAndPassword(email: email.text, password: password.text);
 
-                                Navigator.push(context, MaterialPageRoute(builder: (context)=>DBHomePage() ));
+                                // Navigator.push(context, MaterialPageRoute(builder: (context)=>DBHomePage() ));
+
+
+                                Get.to( DBHomePage() );
+
                               },
                               child: Container(
                                 padding: const EdgeInsets.all(16),
