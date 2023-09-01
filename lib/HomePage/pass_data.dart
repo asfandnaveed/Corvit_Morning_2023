@@ -1,3 +1,4 @@
+import 'package:corvit/Api/api_interface.dart';
 import 'package:corvit/Controller/commonController.dart';
 import 'package:corvit/HomePage/DBHomepage.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,17 @@ class DataScreen extends StatefulWidget {
 class _DataScreenState extends State<DataScreen> {
 
   final Controller common = Get.find();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+
+    ApiInterface().getAllUsersData();
+    
+
+
+    super.initState();
+  }
 
 
   @override

@@ -1,4 +1,27 @@
 class Users {
+  List<UserData>? userData;
+
+  Users({this.userData});
+
+  Users.fromJson(Map<String, dynamic> json) {
+    if (json['user_data'] != null) {
+      userData = <UserData>[];
+      json['user_data'].forEach((v) {
+        userData!.add(new UserData.fromJson(v));
+      });
+    }
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    if (this.userData != null) {
+      data['user_data'] = this.userData!.map((v) => v.toJson()).toList();
+    }
+    return data;
+  }
+}
+
+class UserData {
   String? id;
   String? name;
   String? rollNum;
@@ -9,7 +32,7 @@ class Users {
   String? phoneNo;
   String? password;
 
-  Users(
+  UserData(
       {this.id,
         this.name,
         this.rollNum,
@@ -20,7 +43,7 @@ class Users {
         this.phoneNo,
         this.password});
 
-  Users.fromJson(Map<String, dynamic> json) {
+  UserData.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     name = json['name'];
     rollNum = json['roll_num'];
