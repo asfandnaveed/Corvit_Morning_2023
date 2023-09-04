@@ -21,7 +21,7 @@ class _DataScreenState extends State<DataScreen> {
     // TODO: implement initState
 
     ApiInterface().getAllUsersData();
-    
+    debugPrint('USERS :${common.users.value.userData!.length}');
 
 
     super.initState();

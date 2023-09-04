@@ -21,7 +21,7 @@ class ApiInterface extends GetConnect{
 
       debugPrint("RESPONSE : ${response.body}");
 
-      common.users.value = Users.fromJson(response.body as Map<String, dynamic>);
+      common.users.value = Users.fromJson(response.body );
     }
 
   }
