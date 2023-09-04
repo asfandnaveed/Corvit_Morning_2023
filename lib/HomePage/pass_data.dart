@@ -51,7 +51,39 @@ class _DataScreenState extends State<DataScreen> {
               ElevatedButton(
                   onPressed: (){
                     Get.to(DBHomePage());
-                  }, child: Text('Back'))
+                  }, child: Text('Back')),
+
+              Container(
+                height: 500,
+                child: ListView.builder(
+                    itemCount: common.users.value.userData!.length,
+                    itemBuilder: (context,index){
+                      return Card(
+                        child: Row(
+                          children: [
+                            Column(
+                              children: [
+                                Text('Name'),
+                                Text(
+                                    '${common.users.value.userData![index].name}',
+                                  style: TextStyle(
+                                    fontSize: 20
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Column(
+                              children: [
+                                Text('Father Name'),
+                                Text('${common.users.value.userData![index].fatherName}'),
+                              ],
+                            ),
+                          ],
+                        ),
+                      );
+                    }
+                ),
+              ),
 
             ],
           ),
